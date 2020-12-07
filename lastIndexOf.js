@@ -4,14 +4,14 @@
 
 function lastIndexOf (array, value) {
   let lastTime
-  if (array.length === 0) {
+  if (array.length === 0) { // checks for empty arrays
     lastTime = -1
   } else {
-    for (let i = array.length - 1; i >= 0; i--) {
-      if (array[i] === value) {
+    for (let i = array.length - 1; i >= 0; i--) { // loop backwards to find last time
+      if (array[i] === value) { // checks to see if value occurs in the array at each index
         lastTime = i
-        break;
-      } else {
+        break; // need to break out of the loop once you find the last index a value occurs
+      } else { // if value never occurs, -1
         lastTime = -1
       }
     }
